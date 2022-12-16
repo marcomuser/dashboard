@@ -1,11 +1,13 @@
 import { App } from "./App";
-import { expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
 
-it("renders to the screen", () => {
-  render(<App />);
+describe("General setup", () => {
+  it("renders to the screen", () => {
+    render(<App />);
 
-  const div = screen.getByText("Hello world");
+    const div = screen.getByText("Hello world");
 
-  expect(div).toBeInTheDocument();
+    expect(div).toBeInTheDocument();
+  });
 });
