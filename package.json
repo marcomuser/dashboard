@@ -9,14 +9,14 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "format": "prettier --write",
-    "lint": "eslint",
+    "lint": "eslint --max-warnings 0",
     "tsc": "tsc --noEmit",
     "pre-commit": "lint-staged",
     "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,ts,tsx,json,md,html,css}": "npm run format",
-    "*.{js,ts,tsx}": "npm run lint"
+    "*.{js,ts,tsx}": "npm run lint -- --fix"
   },
   "dependencies": {
     "react": "^18.2.0",
